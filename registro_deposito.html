@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Registro de Personal del Deposito</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <img src="deposito.png" alt="Warning Icon">
+        </div>
+        <div class="titulo_deposito">
+            <h3>REGISTRO DE PERSONAL DEL DEPOSITO</h3>
+        </div>
+        <div class="address_deposito">
+            <h5 id="address"></h5>
+        </div>
+        <div class="message">
+            <p>Ingrese los datos del personal de deposito que desea registrar: </p>
+        </div>
+        <div class="admin-form">
+            <input type="text" id="dni" placeholder="  DNI" class="rounded-input">
+            <input type="text" id="nombre" placeholder="  NAME" class="rounded-input">
+            <input type="text" id="wallet" placeholder="  WALLET" class="rounded-input">
+            <button id="acceptButton" class="green-button">Aceptar</button>
+            <button id="cancelButton" class="green-button">Cancelar</button>
+        </div>
+    </div>
+    <script src="script_registro_deposito.js" defer></script>
+</body>
+</html>

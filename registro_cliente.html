@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Registro de CLientes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <img src="clientes.png" alt="Warning Icon">
+        </div>
+        <div class="titulo_cliente">
+            <h3>REGISTRO DE CLIENTES</h3>
+        </div>
+        <div class="address_cliente">
+            <h5 id="address"></h5>
+        </div>
+        <div class="message">
+            <p>Ingrese los datos del cliente que desea registrar: </p>
+        </div>
+        <div class="admin-form">
+            <input type="text" id="razon_social" placeholder="  RAZON SOCIAL" class="rounded-input">
+            <input type="text" id="direccion" placeholder="  DIRECCION" class="rounded-input">
+            <input type="text" id="wallet" placeholder="  WALLET ADDRESS" class="rounded-input">
+            <button id="acceptButton" class="green-button">Aceptar</button>
+            <button id="cancelButton" class="green-button">Cancelar</button>
+        </div>
+    </div>
+    <script src="script_registro_clientes.js" defer></script>
+</body>
+</html>

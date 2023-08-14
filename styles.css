@@ -1,0 +1,80 @@
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    align-content: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Establece el ancho al 33% */
+    max-width: 440px; /* Puedes ajustar esto según tus necesidades */
+}
+
+.container_order {
+    text-align: center;
+    align-content: center;
+    background-color: #ececeb;
+    padding: 20px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+    width: 100%; /* Establece el ancho al 33% */
+    max-width: 400px; /* Puedes ajustar esto según tus necesidades */
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.message {
+    margin: 0px 0;
+}
+
+.green-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.yellow-button {
+    background-color: #f2c110;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#noButton {
+    background-color: #f36f6f;
+}
+
+/* ... Estilos anteriores ... */
+
+.admin-form {
+    margin-top: 20px;
+   
+}
+
+.rounded-input {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+

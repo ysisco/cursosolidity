@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Seleccionar Productos Oasis</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <img src="clientes.png" alt="Warning Icon">
+        </div>
+        <div class="titulo_cliente">
+            <h3>REGISTRO DE PEDIDOS</h3>
+        </div>
+        <div class="address_cliente">
+            <h5 id="address"></h5>
+        </div>
+    <label for="productSelect">Seleccione un producto:</label>
+    <select id="productSelect">
+        <option value="" disabled selected>Seleccionar...</option>
+        <option value="01500">Tropical Blends (SKU: 01500)</option>
+        <option value="02500">Fresh Tea (SKU: 02500)</option>
+        <option value="03150">Garden Lemonade (SKU: 03150)</option>
+        <!-- Agregar más opciones según la lista de productos -->
+    </select>
+    <div class="icon">
+        <BR>
+    </div>
+    
+    <button id="addButton" class="yellow-button">Añadir Producto</button>
+    <ul id="selectedProductsList"></ul>
+    <div class="icon">
+        <BR>
+            <BR>
+                <BR>
+    </div>
+    <button id="acceptButton" class="green-button">Aceptar</button>
+    <button id="cancelButton" class="green-button">Cancelar</button>
+
+    <script>
+        const productSelect = document.getElementById('productSelect');
+        const addButton = document.getElementById('addButton');
+        const selectedProductsList = document.getElementById('selectedProductsList');       
+
+        const selectedProducts = [];
+
+        addButton.addEventListener('click', () => {
+            const selectedSKU = productSelect.value;
+            if (selectedSKU) {
+                selectedProducts.push(selectedSKU);
+                const productName = productSelect.options[productSelect.selectedIndex].text;
+                const listItem = document.createElement('li');
+                listItem.textContent = productName;
+                selectedProductsList.appendChild(listItem);
+            }
+        });
+
+
+    </script>
+</div>
+    <script type="module" src="script_registro_pedido.js"></script>
+</body>
+</html>

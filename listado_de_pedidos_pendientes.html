@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Órdenes</title>
+</head>
+<body>
+    <h1>Listados de ordenes pedientes y en proceso</h1>
+    <p>Usuario: <span id="userName">John Doe</span></p>
+    
+    <div id="orderList"></div>
+    
+    <script>
+        const orders = [
+            { id: 1, user: "John Doe", items: ["Producto A", "Producto B"], status: "Pendiente" },
+            { id: 2, user: "John Doe", items: ["Producto C", "Producto D"], status: "En Proceso" },
+            { id: 3, user: "John Doe", items: ["Producto E"], status: "Completada" }
+        ];
+        
+        const userNameElement = document.getElementById('userName');
+        const orderListElement = document.getElementById('orderList');
+        
+        const currentUser = "John Doe"; // Cambia esto al nombre del usuario actual
+        
+        userNameElement.textContent = currentUser;
+        
+        orders.forEach(order => {
+            if (order.user === currentUser) {
+                const orderDiv = document.createElement('div');
+                orderDiv.className = 'order';
+                
+                const orderInfo = document.createElement('p');
+                orderInfo.textContent = `Orden #${order.id} - Estado: ${order.status}`;
+                
+                const itemsList = document.createElement('ul');
+                order.items.forEach(item => {
+                    const itemElement = document.createElement('li');
+                    itemElement.textContent = item;
+                    itemsList.appendChild(itemElement);
+                });
+                
+                const prepararButton = document.createElement('button');
+                prepararButton.textContent = 'Preparar';
+                prepararButton.addEventListener('click', () => {
+                    // Lógica para preparar la orden aquí
+                    alert(`Orden #${order.id} en preparacion.`);
+                });
+
+                const entregarButton = document.createElement('button');
+                entregarButton.textContent = 'Entregar';
+                entregarButton.addEventListener('click', () => {
+                    // Lógica para entregar la orden aquí
+                    alert(`Orden #${order.id} entregada.`);
+                });
+                
+                orderDiv.appendChild(orderInfo);
+                orderDiv.appendChild(itemsList);
+                orderDiv.appendChild(prepararButton);
+                orderDiv.appendChild(entregarButton);
+                
+                orderListElement.appendChild(orderDiv);
+            }
+        });
+    </script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

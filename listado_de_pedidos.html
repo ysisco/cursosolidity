@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Listado de Órdenes</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">
+            <img src="clientes.png" alt="Warning Icon">
+        </div>
+        <div class="titulo_cliente">
+            <h3>REGISTRO DE PEDIDOS</h3>
+        </div>
+        <div class="address_cliente">
+            <h5 id="address"></h5>
+        </div>
+
+ 
+  
+    
+    <div id="orderList"></div>
+    
+    <script>
+        const orders = [
+            { id: 1, user: "John Doe", items: ["Producto A", "Producto B"], status: "Pendiente" },
+            { id: 2, user: "John Doe", items: ["Producto C", "Producto D"], status: "En Proceso" },
+            { id: 3, user: "John Doe", items: ["Producto E"], status: "Completada" }
+        ];
+        
+       
+        const orderListElement = document.getElementById('orderList');
+        
+     
+        
+       /* orders.forEach(order => {
+            if (order.user === currentUser) {
+                const orderDiv = document.createElement('div');
+                orderDiv.className = 'order';
+                
+                const orderInfo = document.createElement('p');
+                orderInfo.textContent = `Orden #${order.id} - Estado: ${order.status}`;
+                
+                const itemsList = document.createElement('ul');
+                order.items.forEach(item => {
+                    const itemElement = document.createElement('li');
+                    itemElement.textContent = item;
+                    itemsList.appendChild(itemElement);
+                });
+                
+                const receivedButton = document.createElement('button');
+                receivedButton.textContent = 'Recibido';
+                receivedButton.className="green-button";
+                receivedButton.addEventListener('click', () => {
+                    // Lógica para cancelar la orden aquí
+                    alert(`Orden #${order.id} cancelada.`);
+                });
+
+                const cancelButton = document.createElement('button');
+                cancelButton.textContent = 'Cancelar';
+                cancelButton.className="green-button";
+                cancelButton.addEventListener('click', () => {
+                    // Lógica para cancelar la orden aquí
+                    alert(`Orden #${order.id} cancelada.`);
+                });
+                
+                orderDiv.appendChild(orderInfo);
+                orderDiv.appendChild(itemsList);
+                orderDiv.appendChild(cancelButton);
+                orderDiv.appendChild(receivedButton);
+                
+                orderListElement.appendChild(orderDiv);
+            }
+        });*/
+    </script>
+    </div>
+    <script type="module" src="script_listado_pedidos.js"></script>
+</body>
+</html>
